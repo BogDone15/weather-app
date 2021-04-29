@@ -2,8 +2,17 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
 
+html{
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   font-family: "Open Sans", serif;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -16,7 +25,6 @@ body {
 
 .main {
   height: 90vh;
-  background: #fff;
   box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
   width: 80%;
   margin: 0 auto;
@@ -124,4 +132,64 @@ button:active {
   font-size: 20px;
   letter-spacing: 1px;
   font-weight: 200;
+}
+
+@media screen and (max-width: 996px) {
+  .main {
+    width: 100%;
+  }
+
+  input[type="text"] {
+    width: 39%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .main .container .row {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+
+  .container {
+    height: 100%;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .title-container {
+    height: auto;
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .form-container {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title-container__title {
+    font-size: 33px;
+  }
+
+  .form-container {
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+
+  input[type="text"] {
+    width: 44%;
+  }
+
+  input[type="text"]:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .weather__info {
+    width: 100%;
+  }
 }
